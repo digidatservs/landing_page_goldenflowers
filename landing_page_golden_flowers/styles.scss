@@ -1,0 +1,323 @@
+$color-back-body: rgb(221, 245, 221);
+$color-back-header: rgb(4, 156, 131);
+$color-hov-nav: rgb(205, 243, 205); 
+$color-back-title: rgb(6, 185, 155);
+$color-back-frame: rgb(122, 201, 188); 
+$color-back-form: rgba(156, 238, 206, 0.479); 
+$color-bord-form:  rgb(185, 243, 231);
+$color-act-form: rgb(245, 255, 255);
+$color-hov-but: rgb(122, 238, 98);
+$color-font-main: rgb(255, 255, 255);
+$color-font-form: rgb(36, 77, 70); 
+$color-font-title: rgb(245, 250, 249); 
+$color-link-footer: rgb(21, 245, 215);
+
+@mixin flex_w {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $color-back-body;
+    font-size: 18px;
+    scroll-behavior: smooth;
+    @include flex_w;
+}
+
+header, 
+main, 
+footer, 
+section, 
+#navbar,
+h2 {
+    width: 100%;
+}
+
+h2, 
+#footer-text > p {
+    text-align: center;
+} 
+
+header {
+    background-color: $color-back-header;
+    position: fixed;
+    top: 0px;
+    z-index: 6;
+    display: flex;
+}
+
+main {
+    z-index: 5;
+    margin-top: 30px;
+}
+
+#navbar {
+    line-height: 2rem;
+    float: right;
+        a {
+        text-decoration: none;
+        color: $color-font-main;
+        font-weight: bold;
+        padding: 10px;
+            &:hover {
+            background-color: $color-hov-nav; 
+            color: $color-back-header;
+        }
+    }
+}    
+
+#company {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $color-back-title;
+        #header-logo, 
+        #header-name {
+        padding: 10px;
+        }
+        #logo-company {
+        width: 50px;
+        border-radius: 50%;
+        }
+}
+
+#header-name, 
+#footer-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+#header-name {
+    color: $color-font-title;
+}
+
+#services {
+    @include flex_w;
+}
+
+#services-title,
+#ideas-title,
+#contact-title {
+    background-color: $color-font-main;
+    color: $color-back-header;
+}
+
+.services-container {
+    @include flex_w;
+    justify-content: space-around;
+}
+ 
+.services-card {
+    position: relative;
+    padding: 10px;
+    width: 240px;
+    height: 300px;
+}
+
+.services-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: $color-back-header;
+    &:hover {
+        opacity: 1;
+    }    
+}
+
+.services-text {
+    color: $color-font-main;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center; 
+}
+
+#ideas {
+    @include flex_w;
+    background-color: $color-back-frame;
+    justify-content: space-around;
+}    
+
+.ideas-card {
+    width: 240px;
+    height: 135px;
+}
+
+.ideas-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 10px;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-back-form;
+}    
+
+#contact-container {
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1.3rem;
+}    
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid $color-bord-form;
+    border-radius: 4px;
+        &:focus {
+            background-color: $color-act-form;
+        }   
+}
+
+label {
+    display: flex;
+    margin: 10px auto;
+    color: $color-font-form;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    background-color: $color-back-header;
+    color: $color-font-main;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+        &:hover {
+            background-color: $color-hov-but;
+            color: $color-font-form;
+        }
+}
+
+footer {
+    background-color: $color-back-header;
+    color: $color-font-main;
+        #social-media {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            padding: 10px;
+            justify-content: space-around;
+                a, i {
+                    margin: 10px auto 0px auto;
+                    color: $color-font-main;
+                }
+        }    
+        #footer-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+                #credits-link {
+                    color: $color-link-footer;
+                }
+                #credits-images,
+                #credits-link {
+                    padding: 15px 0px;
+                }
+                #footer-name {
+                    padding: 20px 0px;
+                }
+        }
+}
+
+@media screen and (max-width: 320px) {
+    main {
+        margin-top: 60px;
+    }
+}
+
+@media screen and (min-width: 321px) {
+    .ideas-card {
+        width: 380px;
+        height: 180px;
+    }
+}
+
+@media screen and (min-width: 620px) {
+    body {
+        font-size: 22px;
+    }
+    header {
+        padding: 20px;
+        #navbar a {
+            font-size: 1.8rem;
+        }
+    }    
+    main {
+        z-index: 5;
+        margin-top: 70px;
+    }
+    #logo-company {
+        width: 70px;
+    }
+    #header-name {
+        font-size: 2rem;
+    }
+    .services-card {
+        width: 280px;
+        height: 350px;
+    }
+    .ideas-card {
+        width: 440px;
+        height: 230px;
+    }
+    #contact-container {
+        font-size: 1.6rem;
+    }
+    button {
+        width: 250px;
+        height: 50px;
+        font-size: 1.6rem;
+    }
+}
+
+
+
+@media screen and (min-width: 900px) {
+    body {
+        font-size: 26px;
+    }    
+    .ideas-card {
+        width: 450px;
+        height: 250px;
+    }
+    button {
+        width: 350px;
+        height: 50px;    
+        }
+} 
+      

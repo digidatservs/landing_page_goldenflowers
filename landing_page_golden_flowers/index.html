@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Update website HTML and CSS">
+    <meta name="keywords" content="html, css, sass, flexbox, responsive">
+    <meta name="author" content="Michele Duarte">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Landing Page</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="navbar">
+                    <a class="menu-links" href="#">Home</a>
+                    <a class="menu-links" href="#services">Services</a>
+                    <a class="menu-links" href="#ideas">Ideas</a>
+                    <a class="menu-links" href="#contact">Contact</a>
+            </div>
+        </nav>    
+    </header>
+    <main>
+        <section id="company">
+                <div id="header-logo">
+                    <img id="logo-company" src="./icons/logo_goldenflowers.png" alt="golden flowers logo">
+                </div>
+                <div id="header-name">GOLDEN FLOWERS</div>    
+        </section>
+        <section id="services">
+                <h2 id="services-title">SERVICES</h2>
+                <div class="services-container">
+                    <div class="services-card"> 
+                        <picture>
+                            <source media="(min-width: 900px)" srcset="./images/landscaping_m.jpg">                             
+                            <img src="./images/landscaping_s.jpg" alt="a woman surrounded of flowers" class="services-img">
+                        </picture>    
+                        <div class="overlay">
+                            <div class="services-text">LANDSCAPING</div>
+                        </div>
+                    </div>
+                    <div class="services-card"> 
+                        <picture>
+                            <source media="(min-width: 900px)" srcset="./images/arrangements_m.jpg">    
+                            <img src="./images/arrangements_s.jpg" alt="a vase of flowers" class="services-img">
+                        </picture>    
+                        <div class="overlay">
+                            <div class="services-text">ARRANGEMENTS</div>
+                        </div>
+                    </div>
+                    <div class="services-card"> 
+                        <picture>
+                            <source media="(min-width: 900px)" srcset="./images/decorativegifts_m.jpg">
+                            <img src="./images/decorativegifts_s.jpg" alt="a box of decorative flowers" class="services-img">
+                        </picture>    
+                        <div class="overlay">
+                            <div class="services-text">DECOR GIFTS</div>
+                        </div>
+                    </div>
+                    <div class="services-card"> 
+                        <picture>
+                            <source media="(min-width: 900px)" srcset="./images/gardening_m.jpg">
+                            <img src="./images/gardening_s.jpg" alt="a person holding a sunflower" class="services-img">
+                        </picture>
+                        <div class="overlay">
+                            <div class="services-text">GARDENING</div>
+                        </div>
+                    </div>
+                    <div class="services-card"> 
+                        <picture>
+                            <source media="(min-width: 900px)" srcset="./images/bouquets_m.jpg">
+                            <img src="./images/bouquets_s.jpg" alt="a person carrying a bouquet of flowers" class="services-img">
+                        </picture>    
+                        <div class="overlay">
+                            <div class="services-text">BOUQUETS</div>
+                        </div>
+                    </div>
+                    <div class="services-card"> 
+                        <picture>
+                            <source media="(min-width: 900px)" srcset="./images/deliveries_m.jpg">
+                            <img src="./images/deliveries_s.jpg" alt="a bike with a basket of flowers" class="services-img">
+                        </picture>
+                        <div class="overlay">
+                            <div class="services-text">DELIVERIES</div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section id="ideas">
+                <h2 id="ideas-title">IDEAS</h2>
+                    <div class="ideas-card">
+                        <iframe class="ideas-frame" src="https://www.youtube.com/embed/LFrnGVBHuG0" title="best ideas gardens" allow="accelerometer; 
+                        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="ideas-card">
+                        <iframe class="ideas-frame" src="https://www.youtube.com/embed/GK5eUx2ECMw" title="succulent species plants" allow="accelerometer; 
+                        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="ideas-card">
+                        <iframe class="ideas-frame" src="https://www.youtube.com/embed/F85I1FJmQVc" title="vertical garden ideas" allow="accelerometer; 
+                        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>   
+        </section>
+        <section id="contact">
+                <h2 id="contact-title">CONTACT US</h2>
+            <div id="contact-container">
+                <form action="#">
+                    <div class="label-form">
+                        <label for="fname">First Name</label>
+                    </div>
+                    <div class="input-form">
+                        <input type="text" id="fname" name="firstname" placeholder="Your name...">
+                    </div>
+                    <div class="label-form">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <div class="input-form">
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+                    </div>
+                    <div class="label-form">
+                        <label for="email">E-mail</label>
+                    </div>
+                    <div class="input-form">
+                        <input type="email" id="email" name="email" placeholder="Your e-mail...">
+                    </div>
+                    <div class="label-form">
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="input-form">
+                        <textarea name="subject" rows="4" cols="17" placeholder="Your message..."></textarea> 
+                    </div>    
+                        <button type="button">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>   
+    <footer>
+        <section id="social">
+            <div id="social-media">
+                <a class="social-links" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a class="social-links" href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="social-links" href="https://web.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </section> 
+        <section id="text">   
+            <div id="footer-text">
+                <p id="credits-images">Credits for images: edu-carvalho, jill-wellington,lilartsy, secret-garden, valeriia-miller</p>
+                <p><a id="credits-link" href="https://pexels.com" target="_blank">Pexels</a></p>
+                <p id="footer-name"> &#169; GOLDEN FLOWERS &#174;</p>
+            </div> 
+        </section>       
+    </footer>
+</body>
+</html>
